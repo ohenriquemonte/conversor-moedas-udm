@@ -146,7 +146,9 @@ class _HomeState extends State<Home> {
 Widget buildTextField(
     String label, String prefix, TextEditingController controller, Function f) {
   return TextField(
-    keyboardType: TextInputType.number,
+    // keyboardType: TextInputType.number,
+    keyboardType: TextInputType.numberWithOptions(decimal: true),
+    // Para exibirmos o botão de "." (ponto decimal) no teclado do iOS
     controller: controller,
     decoration: InputDecoration(
       labelText: label,
